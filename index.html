@@ -3,8 +3,31 @@
 <head>
   <title>AAYU SCHOOL Result Checker</title>
 </head>
-<body>
-  <h1>AAYU SCHOOL Class 1 Result Checker 2026–27</h1>
-  <p>Welcome to the result portal.</p>
+<body style="font-family: Arial; text-align:center; padding-top:50px;">
+
+<h1>AAYU SCHOOL Class 1 Result Checker 2026–27</h1>
+
+<input type="text" id="rollNo" placeholder="Enter Roll Number">
+<button onclick="checkResult()">Check Result</button>
+
+<div id="result" style="margin-top:20px; font-size:20px;"></div>
+
+<script>
+function checkResult() {
+  let roll = document.getElementById("rollNo").value;
+  let resultBox = document.getElementById("result");
+
+  if (roll === "101") {
+    resultBox.innerHTML =
+      "Name: Rahul Kumar <br> Class: 1 <br> Result: PASS 🎉";
+  } else if (roll === "102") {
+    resultBox.innerHTML =
+      "Name: Priya Kumari <br> Class: 1 <br> Result: PASS 🎉";
+  } else {
+    resultBox.innerHTML = "Result not found";
+  }
+}
+</script>
+
 </body>
 </html>
