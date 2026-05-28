@@ -1,31 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>AAYU SCHOOL Result Checker</title>
+<title>AAYU SCHOOL Result Checker</title>
 </head>
-<body style="font-family: Arial; text-align:center; padding-top:50px;">
+<body style="font-family:Arial;text-align:center;padding-top:30px;">
 
 <h1>AAYU SCHOOL Class 1 Result Checker 2026–27</h1>
 
 <input type="text" id="rollNo" placeholder="Enter Roll Number">
 <button onclick="checkResult()">Check Result</button>
 
-<div id="result" style="margin-top:20px; font-size:20px;"></div>
+<div id="result" style="margin-top:20px;"></div>
 
 <script>
 function checkResult() {
-  let roll = document.getElementById("rollNo").value;
-  let resultBox = document.getElementById("result");
+let roll = document.getElementById("rollNo").value;
+let result = document.getElementById("result");
 
-  if (roll === "101") {
-    resultBox.innerHTML =
-      "Name: Rahul Kumar <br> Class: 1 <br> Result: PASS 🎉";
-  } else if (roll === "102") {
-    resultBox.innerHTML =
-      "Name: Priya Kumari <br> Class: 1 <br> Result: PASS 🎉";
-  } else {
-    resultBox.innerHTML = "Result not found";
-  }
+if (roll == "101") {
+result.innerHTML = `
+<h2>Student Result</h2>
+Name: Aradhya Kumari <br>
+Class: 1 <br>
+Roll No: 101 <br><br>
+
+English: 15/15 <br>
+Hindi: 13/15 <br>
+Math: 35/40 <br>
+EVS: 9/20 <br>
+Drawing: 7/10 <br><br>
+
+<b>Total: 79/100</b><br>
+<b>Percentage: 79%</b><br>
+<b>Result: PASS 🎉</b>
+`;
+}
+
+else if (roll == "102") {
+result.innerHTML = `
+<h2>Student Result</h2>
+Name: Anya <br>
+Class: 1 <br>
+Roll No: 102 <br><br>
+
+English: 13/15 <br>
+Hindi: 14/15 <br>
+Math: 23.5/40 <br>
+EVS: 12/20 <br>
+Drawing: 10/10 <br><br>
+
+<b>Total: 72.5/100</b><br>
+<b>Percentage: 72.5%</b><br>
+<b>Result: PASS 🎉</b>
+`;
+}
+
+else {
+result.innerHTML = "Result not found";
+}
 }
 </script>
 
