@@ -1,62 +1,148 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>AAYU SCHOOL Result Checker</title>
+<meta charset="UTF-8">
+<title>AAYU CHILHARI SCHOOL BIHAR - Result</title>
+<style>
+body{
+font-family:Arial;
+background:#f3f3f3;
+padding:20px;
+}
+.container{
+max-width:900px;
+margin:auto;
+background:white;
+border:2px solid #999;
+padding:20px;
+}
+.logo{
+width:140px;
+display:block;
+margin:auto;
+}
+h1,h2,h3{
+text-align:center;
+margin:5px;
+}
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:15px;
+}
+th,td{
+border:1px solid black;
+padding:10px;
+text-align:center;
+}
+.search{
+text-align:center;
+margin-bottom:20px;
+}
+input,button{
+padding:10px;
+font-size:16px;
+}
+</style>
 </head>
-<body style="font-family:Arial;text-align:center;padding-top:30px;">
+<body>
 
-<h1>AAYU SCHOOL Class 1 Result Checker 2026–27</h1>
-
+<div class="search">
+<h2>AAYU CHILHARI SCHOOL BIHAR</h2>
 <input type="text" id="rollNo" placeholder="Enter Roll Number">
 <button onclick="checkResult()">Check Result</button>
+</div>
 
-<div id="result" style="margin-top:20px;"></div>
+<div id="result"></div>
 
 <script>
-function checkResult() {
-let roll = document.getElementById("rollNo").value;
-let result = document.getElementById("result");
+function checkResult(){
+let roll=document.getElementById("rollNo").value;
+let box=document.getElementById("result");
 
-if (roll == "101") {
-result.innerHTML = `
-<h2>Student Result</h2>
-Name: Aradhya Kumari <br>
-Class: 1 <br>
-Roll No: 101 <br><br>
+if(roll=="101"){
+box.innerHTML=`
+<div class="container">
 
-English: 15/15 <br>
-Hindi: 13/15 <br>
-Math: 35/40 <br>
-EVS: 9/20 <br>
-Drawing: 7/10 <br><br>
+<img src="logo.png" class="logo">
 
-<b>Total: 79/100</b><br>
-<b>Percentage: 79%</b><br>
-<b>Result: PASS 🎉</b>
-`;
+<h1>AAYU CHILHARI SCHOOL BIHAR</h1>
+<h3>Annual Report Card 2026</h3>
+<h3>Date: 28-05-2026</h3>
+
+<p><b>Name:</b> Aradhya Kumari</p>
+<p><b>Father Name:</b> Mukesh Singh</p>
+<p><b>Class:</b> 1</p>
+<p><b>Roll No:</b> 101</p>
+
+<table>
+<tr>
+<th>Subject</th>
+<th>Max Marks</th>
+<th>Obtained</th>
+</tr>
+
+<tr><td>English</td><td>15</td><td>15</td></tr>
+<tr><td>Hindi</td><td>15</td><td>13</td></tr>
+<tr><td>Math</td><td>40</td><td>35</td></tr>
+<tr><td>EVS</td><td>20</td><td>9</td></tr>
+<tr><td>Drawing</td><td>10</td><td>7</td></tr>
+
+<tr>
+<td><b>Total</b></td>
+<td><b>100</b></td>
+<td><b>79</b></td>
+</tr>
+</table>
+
+<h3>Percentage: 79%</h3>
+<h2>Result: PASS 🎉</h2>
+
+</div>`;
 }
 
-else if (roll == "102") {
-result.innerHTML = `
-<h2>Student Result</h2>
-Name: Anya <br>
-Class: 1 <br>
-Roll No: 102 <br><br>
+else if(roll=="102"){
+box.innerHTML=`
+<div class="container">
 
-English: 13/15 <br>
-Hindi: 14/15 <br>
-Math: 23.5/40 <br>
-EVS: 12/20 <br>
-Drawing: 10/10 <br><br>
+<img src="logo.png" class="logo">
 
-<b>Total: 72.5/100</b><br>
-<b>Percentage: 72.5%</b><br>
-<b>Result: PASS 🎉</b>
-`;
+<h1>AAYU CHILHARI SCHOOL BIHAR</h1>
+<h3>Annual Report Card 2026</h3>
+<h3>Date: 28-05-2026</h3>
+
+<p><b>Name:</b> Anya</p>
+<p><b>Father Name:</b> Pintu Singh</p>
+<p><b>Class:</b> 1</p>
+<p><b>Roll No:</b> 102</p>
+
+<table>
+<tr>
+<th>Subject</th>
+<th>Max Marks</th>
+<th>Obtained</th>
+</tr>
+
+<tr><td>English</td><td>15</td><td>13</td></tr>
+<tr><td>Hindi</td><td>15</td><td>14</td></tr>
+<tr><td>Math</td><td>40</td><td>23.5</td></tr>
+<tr><td>EVS</td><td>20</td><td>12</td></tr>
+<tr><td>Drawing</td><td>10</td><td>10</td></tr>
+
+<tr>
+<td><b>Total</b></td>
+<td><b>100</b></td>
+<td><b>72.5</b></td>
+</tr>
+</table>
+
+<h3>Percentage: 72.5%</h3>
+<h2>Result: PASS 🎉</h2>
+
+</div>`;
 }
-
-else {
-result.innerHTML = "Result not found";
+else{
+box.innerHTML="<h2 style='text-align:center'>Result not found</h2>";
 }
 }
 </script>
